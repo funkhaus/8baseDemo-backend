@@ -2,9 +2,11 @@
 
 This is a basic demo of how to build a basic 8Base powered application using Nuxt as a frontend. This repo covers the 8Base custom functions.
 
+Please see the corresponding [frontend codebase here](https://github.com/funkhaus/8baseDemo-backend).
+
 ## Custom functions
 
-Basically LAMBDA functions on that run on AWS.
+Basically these are LAMBDA functions that run on AWS.
 
 There are 4 types of Custom Functions.
 SEE https://docs.8base.com/docs/8base-console/custom-functions/
