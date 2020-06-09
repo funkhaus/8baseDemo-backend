@@ -1,6 +1,6 @@
 # 8BaseDemo-backend
 
-This is a basic demo of how to build a basic 8Base powered application using Nuxt as a frontend. This repo covers the 8Base custom functions.
+This is part of a demo of how to build an 8Base powered application using Nuxt as a frontend. This repo covers the 8Base custom functions that live on the 8Base servers.
 
 Please see the corresponding [frontend codebase here](https://github.com/funkhaus/8baseDemo-backend).
 
