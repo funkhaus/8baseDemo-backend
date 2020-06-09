@@ -1,0 +1,3 @@
+extend type Mutation {
+  userUpdatePassword(password: String!): SuccessResponse!
+}

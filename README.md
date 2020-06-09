@@ -9,21 +9,28 @@ Basically LAMBDA functions on that run on AWS.
 There are 4 types of Custom Functions.
 SEE https://docs.8base.com/docs/8base-console/custom-functions/
 
+1. Resolvers: For extending your GraphQL API with new "endpoints"
+1. Webhooks: You can run a custom function via a URL
+1. Triggers: For functions requiring event-based execution (like before or after a query/mutation)
+1. Tasks: For invocable and scheduled (cron) functions
+
 ## Install 8Base CLI
 
 `sudo npm install -g 8base-cli`.
 
 SEE https://docs.8base.com/docs/development-tools/cli/
 
-### Example: Don't allow user to Like a Post twice
+### Example: Custom Resolver - Don't allow user to Like a Post twice
 
 1. `8base login`
-1. `8base init vue-demo -e`
-1. `cd vue-demo`
+1. `8base init server -e`
+1. `cd server`
 1. `8base generate resolver likePost -s=js`
    1. `8base generate -h` for all options. You want TypeScript?
-1. Install graphql and graphql-tag into package
+1. Create `/server/src/resolvers/likePost/schema.graphql`
+1. Install `graphql` and `graphql-tag` into package
 1. `8base deploy`
+1. Notice how API Explorer in 8Base dashboard has changed now.
 
 The way 8Base knows what functions match what hooks/events, is the `8base.yml` file.
 
@@ -39,12 +46,11 @@ SEE https://app.8base.com/settings/environment-variables
 
 And then in code: `process.env.{varKey}`
 
-## Export/Import data model
+## Export/Import data model from 8Base
 
 `8base export -h`
 `8base import -h`
 
-## Some Auth0 resolvers
+## Some Auth0 resolver examples
 
-1. Auth SDK import: https://github.com/funkhaus/polaris-backend/blob/master/server/src/auth0/index.js
-1. Custom forgot password API resolver: https://github.com/funkhaus/polaris-backend/blob/master/server/src/resolvers/userForgotPassword/index.js
+I included some examples of resolvers to wrap some Auth0 functions for you.

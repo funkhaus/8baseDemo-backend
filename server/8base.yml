@@ -1,0 +1,20 @@
+functions:
+  likePost:
+    type: resolver
+    handler:
+      code: src/resolvers/likePost/handler.js
+    schema: src/resolvers/likePost/schema.graphql
+# userForgotPassword:
+#     type: resolver
+#     handler:
+#       code: src/resolvers/userForgotPassword/handler.js
+#     schema: src/resolvers/userForgotPassword/schema.graphql
+#     description: |
+#       Sends user password reset email
+#   userUpdatePassword:
+#     type: resolver
+#     handler:
+#       code: src/resolvers/userUpdatePassword/handler.js
+#     schema: src/resolvers/userUpdatePassword/schema.graphql
+#     description: |
+#       Updates the users password
