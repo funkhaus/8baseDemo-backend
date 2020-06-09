@@ -1,6 +1,6 @@
 {
   "data": {
-    "foo": "bad"
+    "id": "bad"
   },
   "headers": {
     "x-header-1": "header value"
